@@ -1,0 +1,6 @@
+E:\Projects\eMenu\eMenu\obj\Debug\eMenu.csprojResolveAssemblyReference.cache
+E:\Projects\eMenu\eMenu\bin\eMenu.dll.config
+E:\Projects\eMenu\eMenu\bin\eMenu.dll
+E:\Projects\eMenu\eMenu\bin\eMenu.pdb
+E:\Projects\eMenu\eMenu\obj\Debug\eMenu.dll
+E:\Projects\eMenu\eMenu\obj\Debug\eMenu.pdb

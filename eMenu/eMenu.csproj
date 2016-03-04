@@ -5652,6 +5652,7 @@
   <ItemGroup>
     <Compile Include="BL\AbstractBL.cs" />
     <Compile Include="BL\eMenuDataContext.cs" />
+    <Compile Include="BL\TB_TestBL.cs" />
     <Compile Include="DTO\EntityManager.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

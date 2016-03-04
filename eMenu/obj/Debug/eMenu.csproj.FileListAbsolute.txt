@@ -4,3 +4,9 @@ E:\Projects\eMenu\eMenu\bin\eMenu.dll
 E:\Projects\eMenu\eMenu\bin\eMenu.pdb
 E:\Projects\eMenu\eMenu\obj\Debug\eMenu.dll
 E:\Projects\eMenu\eMenu\obj\Debug\eMenu.pdb
+C:\Users\hq12311\Documents\GitHub\eMenuKitchen\eMenu\eMenu\bin\eMenu.dll.config
+C:\Users\hq12311\Documents\GitHub\eMenuKitchen\eMenu\eMenu\bin\eMenu.dll
+C:\Users\hq12311\Documents\GitHub\eMenuKitchen\eMenu\eMenu\bin\eMenu.pdb
+C:\Users\hq12311\Documents\GitHub\eMenuKitchen\eMenu\eMenu\obj\Debug\eMenu.csprojResolveAssemblyReference.cache
+C:\Users\hq12311\Documents\GitHub\eMenuKitchen\eMenu\eMenu\obj\Debug\eMenu.dll
+C:\Users\hq12311\Documents\GitHub\eMenuKitchen\eMenu\eMenu\obj\Debug\eMenu.pdb

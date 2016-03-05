@@ -54,13 +54,13 @@
                                 <a href="#">Dashboard</a>
                             </li>
                             <li>
-                                <a href="#">Reports</a>
+                                <a href="MenuItem.aspx">Menu Items</a>
                             </li>
                             <li>
-                                <a href="#">Templates</a>
+                                <a href="#">Hot Dishes</a>
                             </li>
                             <li>
-                                <a href="#">Support</a>
+                                <a href="#">Customers</a>
                             </li>
                             <li>
                                 <a href="#">Settings</a>
@@ -111,24 +111,7 @@
     <div class="clearfix"></div>
     <!-- END HEADER & CONTENT DIVIDER -->
     <!-- BEGIN CONTAINER -->
-    <div class="page-container page-content-inner page-container-bg-solid">
-        <!-- BEGIN BREADCRUMBS -->
-        <div class="breadcrumbs">
-            <div class="container-fluid">
-                <h2 class="breadcrumbs-title">Dashboard</h2>
-                <ol class="breadcrumbs-list">
-                    <li>
-                        <a class="breadcrumbs-item-link" href="#">Home</a>
-                    </li>
-                    <li>
-                        <a class="breadcrumbs-item-link" href="#">Features</a>
-                    </li>
-                    <li>
-                        <a class="breadcrumbs-item-link" href="#">Dashboard</a>
-                    </li>
-                </ol>
-            </div>
-        </div>
+    
         <!-- END BREADCRUMBS -->
 
         <form id="form1" runat="server">
@@ -140,10 +123,7 @@
         <!-- BEGIN FOOTER -->
         <div class="page-footer">
             <div class="page-footer-inner container-fluid container-lf-space">
-                <p class="page-footer-copyright">
-                    2015 &copy; Metronic by keenthemes.
-                    <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase Metronic!</a>
-                </p>
+                <p class="copyright">2016 - eMenu - PDM_Project</p>
             </div>
             <div class="go2top">
                 <i class="icon-arrow-up"></i>
@@ -151,13 +131,7 @@
         </div>
         <!-- END FOOTER -->
         <!-- BEGIN QUICK SIDEBAR TOGGLER -->
-        <button type="button" class="quick-sidebar-toggler" data-toggle="collapse">
-            <span class="sr-only">Toggle Quick Sidebar</span>
-            <i class="icon-logout"></i>
-            <div class="quick-sidebar-notification">
-                <span class="badge badge-danger">7</span>
-            </div>
-        </button>
+        
         <!-- END QUICK SIDEBAR TOGGLER -->
         <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>

@@ -9,6 +9,13 @@ namespace eMenu.BL
 {
     public class tbFoodItemsBL:AbstractBL<tb_foodItem, long>
     {
+        public int Save(tb_foodItem masterData)
+        {
+            ITPManager.tb_foodItems.InsertOnSubmit(masterData);
+            ITPManager.SubmitChanges();
+
+            return masterData.ID;
+        }
 
         public List<tb_foodItemsE> GetAll()
         {

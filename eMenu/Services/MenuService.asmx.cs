@@ -1,4 +1,5 @@
 ﻿using eMenu.BL;
+using eMenu.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,27 @@ namespace eMenu.Services
         [WebMethod(EnableSession = true)]
         [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
         public List<tb_menuE> GetAll()
+        {
+            return new tbMenuBL().GetAll();
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        public void SaveItem(string itemName)
+        {
+
+
+            tb_menu addCategory = new tb_menu();
+
+            addCategory.itemName = itemName;
+
+            new tbMenuBL().Save(addCategory);
+
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        public List<tb_menuE> GetAllCategories()
         {
             return new tbMenuBL().GetAll();
         }

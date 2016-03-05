@@ -1,5 +1,6 @@
 ﻿using eMenu.BL;
 using eMenu.Entity;
+using eMenu.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,22 @@ namespace eMenu.Services
         public List<tb_foodItemsE> GetAll()
         {
             return new tbFoodItemsBL().GetAll();
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        public void SaveItem(string name, decimal price , int CatId)
+        {
+
+
+            tb_foodItem addFood = new tb_foodItem();
+
+            addFood.name = name;
+            addFood.price = price;
+            addFood.CatID = CatId;
+
+            new tbFoodItemsBL().Save(addFood);
+
         }
     }
 }

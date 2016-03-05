@@ -8,7 +8,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Metronic | User Login 1</title>
+        <title>eMenu - Resturant Menu Order System<</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="description" />
@@ -34,7 +34,29 @@
         <!-- END PAGE LEVEL STYLES -->
         <!-- BEGIN THEME LAYOUT STYLES -->
         <!-- END THEME LAYOUT STYLES -->
-        <link rel="shortcut icon" href="favicon.ico" /> </head>
+        <link rel="shortcut icon" href="favicon.ico" />
+
+        <script type="text/javascript">
+
+            function login() {
+
+                var uname = document.getElementById("Username").value;
+                var pwd = document.getElementById("password").value;
+
+                if (uname == "admin" && pwd == "123") {
+
+                    window.location = "Default.aspx";
+
+                }
+
+            }
+            
+
+
+        </script>
+
+
+    </head>
     <!-- END HEAD -->
 
     <body class=" login">
@@ -42,14 +64,14 @@
         <!-- END SIDEBAR TOGGLER BUTTON -->
         <!-- BEGIN LOGO -->
         <div class="logo">
-            <a href="index.html">
+            <a href="Default.aspx">
                 <img src="../assets/pages/img/logo-big.png" alt="" /> </a>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
         <div class="content">
             <!-- BEGIN LOGIN FORM -->
-            <form class="login-form" action="index.html" method="post">
+            <form class="login-form" action="Default.aspx" method="post">
                 <h3 class="form-title font-green">Sign In</h3>
                 <div class="alert alert-danger display-hide">
                     <button class="close" data-close="alert"></button>
@@ -58,13 +80,12 @@
                 <div class="form-group">
                     <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                     <label class="control-label visible-ie8 visible-ie9">Username</label>
-                    <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username" /> </div>
+                    <input id="Username" class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username" /> </div>
                 <div class="form-group">
                     <label class="control-label visible-ie8 visible-ie9">Password</label>
-                    <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" /> </div>
+                    <input id="password" class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" /> </div>
                 <div class="form-group">
-                    <button type="submit" class="btn green uppercase">Login</button>
-                    
+                    <button id="btnLogin" type="submit" class="btn green uppercase" onclick="login();">Login</button>
                 </div>
                 
                 
@@ -105,6 +126,10 @@
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <!-- END THEME LAYOUT SCRIPTS -->
+        
+
+
+
     </body>
 
 </html>

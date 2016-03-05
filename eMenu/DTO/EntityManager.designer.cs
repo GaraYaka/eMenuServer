@@ -33,6 +33,12 @@ namespace eMenu.DTO
     partial void InsertTB_Test(TB_Test instance);
     partial void UpdateTB_Test(TB_Test instance);
     partial void DeleteTB_Test(TB_Test instance);
+    partial void Inserttb_foodItem(tb_foodItem instance);
+    partial void Updatetb_foodItem(tb_foodItem instance);
+    partial void Deletetb_foodItem(tb_foodItem instance);
+    partial void Inserttb_menu(tb_menu instance);
+    partial void Updatetb_menu(tb_menu instance);
+    partial void Deletetb_menu(tb_menu instance);
     #endregion
 		
 		public EntityManagerDataContext() : 
@@ -65,19 +71,19 @@ namespace eMenu.DTO
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<TB_Test> TB_Tests
-		{
-			get
-			{
-				return this.GetTable<TB_Test>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tb_customer> tb_customers
 		{
 			get
 			{
 				return this.GetTable<tb_customer>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TB_Test> TB_Tests
+		{
+			get
+			{
+				return this.GetTable<TB_Test>();
 			}
 		}
 		
@@ -102,92 +108,6 @@ namespace eMenu.DTO
 			get
 			{
 				return this.GetTable<tb_menu>();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TB_Test")]
-	public partial class TB_Test : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _test;
-		
-		private string _d;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OntestChanging(string value);
-    partial void OntestChanged();
-    partial void OndChanging(string value);
-    partial void OndChanged();
-    #endregion
-		
-		public TB_Test()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_test", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string test
-		{
-			get
-			{
-				return this._test;
-			}
-			set
-			{
-				if ((this._test != value))
-				{
-					this.OntestChanging(value);
-					this.SendPropertyChanging();
-					this._test = value;
-					this.SendPropertyChanged("test");
-					this.OntestChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_d", DbType="NChar(10)")]
-		public string d
-		{
-			get
-			{
-				return this._d;
-			}
-			set
-			{
-				if ((this._d != value))
-				{
-					this.OndChanging(value);
-					this.SendPropertyChanging();
-					this._d = value;
-					this.SendPropertyChanged("d");
-					this.OndChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -345,9 +265,97 @@ namespace eMenu.DTO
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_foodItems")]
-	public partial class tb_foodItem
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TB_Test")]
+	public partial class TB_Test : INotifyPropertyChanging, INotifyPropertyChanged
 	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _test;
+		
+		private string _d;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OntestChanging(string value);
+    partial void OntestChanged();
+    partial void OndChanging(string value);
+    partial void OndChanged();
+    #endregion
+		
+		public TB_Test()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_test", DbType="NChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string test
+		{
+			get
+			{
+				return this._test;
+			}
+			set
+			{
+				if ((this._test != value))
+				{
+					this.OntestChanging(value);
+					this.SendPropertyChanging();
+					this._test = value;
+					this.SendPropertyChanged("test");
+					this.OntestChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_d", DbType="NChar(10)")]
+		public string d
+		{
+			get
+			{
+				return this._d;
+			}
+			set
+			{
+				if ((this._d != value))
+				{
+					this.OndChanging(value);
+					this.SendPropertyChanging();
+					this._d = value;
+					this.SendPropertyChanged("d");
+					this.OndChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_foodItems")]
+	public partial class tb_foodItem : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _ID;
 		
@@ -357,11 +365,30 @@ namespace eMenu.DTO
 		
 		private System.Nullable<decimal> _price;
 		
+		private int _CatID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void OnimgChanging(string value);
+    partial void OnimgChanged();
+    partial void OnpriceChanging(System.Nullable<decimal> value);
+    partial void OnpriceChanged();
+    partial void OnCatIDChanging(int value);
+    partial void OnCatIDChanged();
+    #endregion
+		
 		public tb_foodItem()
 		{
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID
 		{
 			get
@@ -372,7 +399,11 @@ namespace eMenu.DTO
 			{
 				if ((this._ID != value))
 				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
 					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
 				}
 			}
 		}
@@ -388,7 +419,11 @@ namespace eMenu.DTO
 			{
 				if ((this._name != value))
 				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
 					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
 				}
 			}
 		}
@@ -404,7 +439,11 @@ namespace eMenu.DTO
 			{
 				if ((this._img != value))
 				{
+					this.OnimgChanging(value);
+					this.SendPropertyChanging();
 					this._img = value;
+					this.SendPropertyChanged("img");
+					this.OnimgChanged();
 				}
 			}
 		}
@@ -420,8 +459,52 @@ namespace eMenu.DTO
 			{
 				if ((this._price != value))
 				{
+					this.OnpriceChanging(value);
+					this.SendPropertyChanging();
 					this._price = value;
+					this.SendPropertyChanged("price");
+					this.OnpriceChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CatID", DbType="Int NOT NULL")]
+		public int CatID
+		{
+			get
+			{
+				return this._CatID;
+			}
+			set
+			{
+				if ((this._CatID != value))
+				{
+					this.OnCatIDChanging(value);
+					this.SendPropertyChanging();
+					this._CatID = value;
+					this.SendPropertyChanged("CatID");
+					this.OnCatIDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
@@ -508,31 +591,50 @@ namespace eMenu.DTO
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_menu")]
-	public partial class tb_menu
+	public partial class tb_menu : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
-		private int _itemID;
-		
-		private string _itemName;
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _catID;
 		
+		private string _itemName;
+		
+		private string _catImg;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OncatIDChanging(int value);
+    partial void OncatIDChanged();
+    partial void OnitemNameChanging(string value);
+    partial void OnitemNameChanged();
+    partial void OncatImgChanging(string value);
+    partial void OncatImgChanged();
+    #endregion
+		
 		public tb_menu()
 		{
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_itemID", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
-		public int itemID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_catID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int catID
 		{
 			get
 			{
-				return this._itemID;
+				return this._catID;
 			}
 			set
 			{
-				if ((this._itemID != value))
+				if ((this._catID != value))
 				{
-					this._itemID = value;
+					this.OncatIDChanging(value);
+					this.SendPropertyChanging();
+					this._catID = value;
+					this.SendPropertyChanged("catID");
+					this.OncatIDChanged();
 				}
 			}
 		}
@@ -548,24 +650,52 @@ namespace eMenu.DTO
 			{
 				if ((this._itemName != value))
 				{
+					this.OnitemNameChanging(value);
+					this.SendPropertyChanging();
 					this._itemName = value;
+					this.SendPropertyChanged("itemName");
+					this.OnitemNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_catID", DbType="Int NOT NULL")]
-		public int catID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_catImg", DbType="VarChar(100)")]
+		public string catImg
 		{
 			get
 			{
-				return this._catID;
+				return this._catImg;
 			}
 			set
 			{
-				if ((this._catID != value))
+				if ((this._catImg != value))
 				{
-					this._catID = value;
+					this.OncatImgChanging(value);
+					this.SendPropertyChanging();
+					this._catImg = value;
+					this.SendPropertyChanged("catImg");
+					this.OncatImgChanged();
 				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

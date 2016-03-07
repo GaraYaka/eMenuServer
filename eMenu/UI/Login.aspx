@@ -65,7 +65,7 @@
         <!-- BEGIN LOGO -->
         <div class="logo">
             <a href="Default.aspx">
-                <img src="../assets/pages/img/logo-big.png" alt="" /> </a>
+                <img src="<%: ResolveUrl("~/assets/layouts/layout7/img/logo.png")%>" alt="" /> </a>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->

@@ -58,6 +58,13 @@ namespace eMenu.Services
 
         [WebMethod(EnableSession = true)]
         [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        public List<tb_hotdishesE> GetAllHotDish()
+        {
+            return new tb_hotdishesBL().GetAll();
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
         public void SaveFoodItem(string name, decimal price, int CatId)
         {
 
@@ -69,6 +76,22 @@ namespace eMenu.Services
             addFood.CatID = CatId;
 
             new tbFoodItemsBL().Save(addFood);
+
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        public void SaveHotDish(string name, decimal price)
+        {
+
+
+            tb_hotdishe addFood = new tb_hotdishe();
+
+            addFood.name = name;
+            addFood.price = price;
+            
+
+            new tb_hotdishesBL().Save(addFood);
 
         }
     }

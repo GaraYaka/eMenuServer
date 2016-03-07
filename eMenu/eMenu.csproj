@@ -434,10 +434,6 @@
     <Content Include="assets\pages\media\pages\Thumbs.db" />
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Services\CustomerService.asmx" />
-    <Content Include="Services\FoodItemsService.asmx" />
-    <Content Include="Services\HotDishesService.asmx" />
-    <Content Include="Services\MenuService.asmx" />
     <Content Include="Site.Master" />
     <None Include="Properties\PublishProfiles\appPublish.pubxml" />
     <None Include="Web.Debug.config">
@@ -5651,6 +5647,7 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Services\soapService.asmx" />
     <Content Include="UI\Default.aspx" />
+    <Content Include="UI\HotDishes.aspx" />
     <Content Include="UI\Login.aspx" />
     <Content Include="UI\MenuItem.aspx" />
     <Content Include="Web.config" />
@@ -5676,22 +5673,6 @@
     <Compile Include="Entity\tb_menuE.cs" />
     <Compile Include="Entity\www1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\CustomerService.asmx.cs">
-      <DependentUpon>CustomerService.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Services\FoodItemsService.asmx.cs">
-      <DependentUpon>FoodItemsService.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Services\HotDishesService.asmx.cs">
-      <DependentUpon>HotDishesService.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Services\MenuService.asmx.cs">
-      <DependentUpon>MenuService.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Services\soapService.asmx.cs">
       <DependentUpon>soapService.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -5709,6 +5690,13 @@
     </Compile>
     <Compile Include="UI\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HotDishes.aspx.cs">
+      <DependentUpon>HotDishes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\HotDishes.aspx.designer.cs">
+      <DependentUpon>HotDishes.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

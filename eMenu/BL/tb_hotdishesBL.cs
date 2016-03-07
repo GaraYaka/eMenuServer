@@ -9,6 +9,15 @@ namespace eMenu.BL
 {
     public class tb_hotdishesBL : AbstractBL<tb_hotdishe, long>
     {
+
+        public int Save(tb_hotdishe masterData)
+        {
+            ITPManager.tb_hotdishes.InsertOnSubmit(masterData);
+            ITPManager.SubmitChanges();
+
+            return masterData.ID;
+        }
+
         public List<tb_hotdishesE> GetAll()
         {
             var all = (from d in ITPManager.tb_hotdishes

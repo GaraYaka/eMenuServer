@@ -27,19 +27,19 @@
       <Column Name="CatID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
-  <Table Name="dbo.tb_hotdishes" Member="tb_hotdishes">
-    <Type Name="tb_hotdishe">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="img" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="price" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.tb_menu" Member="tb_menus">
     <Type Name="tb_menu">
       <Column Name="catID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="itemName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="catImg" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_hotdishes" Member="tb_hotdishes">
+    <Type Name="tb_hotdishe">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="img" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

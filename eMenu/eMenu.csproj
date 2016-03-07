@@ -439,6 +439,7 @@
     <Content Include="Services\HotDishesService.asmx" />
     <Content Include="Services\MenuService.asmx" />
     <Content Include="Site.Master" />
+    <None Include="Properties\PublishProfiles\appPublish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

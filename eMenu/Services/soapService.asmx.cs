@@ -23,9 +23,53 @@ namespace eMenu.Services
 
         [WebMethod(EnableSession = true)]
         [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
-        public string HelloWorld()
+        public List<tb_menuE> GetAll()
         {
-            return "Hello World";
+            return new tbMenuBL().GetAll();
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        public void SaveItem(string itemName)
+        {
+
+
+            tb_menu addCategory = new tb_menu();
+
+            addCategory.itemName = itemName;
+
+            new tbMenuBL().Save(addCategory);
+
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        public List<tb_menuE> GetAllCategories()
+        {
+            return new tbMenuBL().GetAll();
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        public List<tb_foodItemsE> GetFoodAll()
+        {
+            return new tbFoodItemsBL().GetAll();
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        public void SaveFoodItem(string name, decimal price, int CatId)
+        {
+
+
+            tb_foodItem addFood = new tb_foodItem();
+
+            addFood.name = name;
+            addFood.price = price;
+            addFood.CatID = CatId;
+
+            new tbFoodItemsBL().Save(addFood);
+
         }
     }
 }

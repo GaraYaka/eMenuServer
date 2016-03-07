@@ -23,7 +23,7 @@ namespace eMenu.Services
 
         [WebMethod(EnableSession = true)]
         [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
-        public List<tb_foodItemsE> GetAll()
+        public List<tb_foodItemsE> GetFAll()
         {
             return new tbFoodItemsBL().GetAll();
         }

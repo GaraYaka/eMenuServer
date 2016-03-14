@@ -23,7 +23,7 @@
 
                     $('#divCat').append(html);
                 }, error: function (request, status, error) {
-                    alert("Error! Cannot Load Categorie.");
+                    alert("Error! Cannot Load Categories.");
                 }
             });
         }
@@ -45,7 +45,7 @@
                 success: function (result) {
 
                    
-                    popHTMLContent = '<div class="alert alert-success"><strong>Success!</strong> The recored has been added.</div>';
+                    popHTMLContent = '<div class="alert alert-success"><strong>Success!</strong> The record has been added.</div>';
                     bootbox.dialog({
                         message: popHTMLContent,
                         title: "",

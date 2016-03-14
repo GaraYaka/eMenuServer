@@ -23,7 +23,7 @@
 
                     $('#divCat').append(html);
                 }, error: function (request, status, error) {
-                    alert("Error! Cannot Load Categorie.");
+                    alert("Error! Cannot Load Categories.");
                 }
             });
         }
@@ -44,19 +44,21 @@
                 type: "POST",
                 success: function (result) {
 
-                    alert("Added");
-                    popHTMLContent = '<div class="alert alert-success"><strong>Success!</strong> The recored has been added.</div>';
+                   
+                    popHTMLContent = '<div class="alert alert-success"><strong>Success!</strong> The record has been added.</div>';
                     bootbox.dialog({
                         message: popHTMLContent,
                         title: "",
                         closeButton: true,
+
+                        
                     });
 
 
 
                 }, error: function (request, status, error) {
 
-                    alert("Error");
+                    
                     popHTMLContent = '<div class="alert alert-danger"><strong>Error!</strong> Please fill the Customer Name & Phone No.</div>';
                     bootbox.dialog({
                         message: popHTMLContent,
@@ -65,6 +67,7 @@
                     });
                 }
             });
+
         }
 
         function InsertFood() {
@@ -156,7 +159,8 @@
                                 
                                 <div id="btnb1" class="form-group">
 
-                                    <button id="btnAddCat" type="button" class="btn green-meadow" style="width: 120px" onclick="InsertCat();">Add Category</button>
+           
+                                    <button id="btnAddCat" type="button" class="btn green-meadow" style="width: 120px" onclick="InsertCat(); location.reload();">Add Category</button>
                                 </div>
                             </div>
                         </div>

@@ -32,5 +32,20 @@ namespace eMenu.BL
 
             return all;
         }
+
+        public List<tb_hotdishesE> GetHotDishToAPP()
+        {
+            var all = (from d in ITPManager.tb_hotdishes
+                       select new tb_hotdishesE
+                       {
+                           ID = d.ID,
+                           name = d.name,
+                           img = d.img,
+                           price = d.price
+
+                       }).ToList();
+
+            return all;
+        }
     }
 }

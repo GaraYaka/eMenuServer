@@ -42,6 +42,9 @@ namespace eMenu.DTO
     partial void Inserttb_hotdishe(tb_hotdishe instance);
     partial void Updatetb_hotdishe(tb_hotdishe instance);
     partial void Deletetb_hotdishe(tb_hotdishe instance);
+    partial void Inserttb_user(tb_user instance);
+    partial void Updatetb_user(tb_user instance);
+    partial void Deletetb_user(tb_user instance);
     #endregion
 		
 		public EntityManagerDataContext() : 
@@ -111,6 +114,14 @@ namespace eMenu.DTO
 			get
 			{
 				return this.GetTable<tb_hotdishe>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tb_user> tb_users
+		{
+			get
+			{
+				return this.GetTable<tb_user>();
 			}
 		}
 	}
@@ -731,6 +742,116 @@ namespace eMenu.DTO
 					this._price = value;
 					this.SendPropertyChanged("price");
 					this.OnpriceChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_users")]
+	public partial class tb_user : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _uid;
+		
+		private string _uname;
+		
+		private string _umobile;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnuidChanging(int value);
+    partial void OnuidChanged();
+    partial void OnunameChanging(string value);
+    partial void OnunameChanged();
+    partial void OnumobileChanging(string value);
+    partial void OnumobileChanged();
+    #endregion
+		
+		public tb_user()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_uid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int uid
+		{
+			get
+			{
+				return this._uid;
+			}
+			set
+			{
+				if ((this._uid != value))
+				{
+					this.OnuidChanging(value);
+					this.SendPropertyChanging();
+					this._uid = value;
+					this.SendPropertyChanged("uid");
+					this.OnuidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_uname", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string uname
+		{
+			get
+			{
+				return this._uname;
+			}
+			set
+			{
+				if ((this._uname != value))
+				{
+					this.OnunameChanging(value);
+					this.SendPropertyChanging();
+					this._uname = value;
+					this.SendPropertyChanged("uname");
+					this.OnunameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_umobile", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string umobile
+		{
+			get
+			{
+				return this._umobile;
+			}
+			set
+			{
+				if ((this._umobile != value))
+				{
+					this.OnumobileChanging(value);
+					this.SendPropertyChanging();
+					this._umobile = value;
+					this.SendPropertyChanged("umobile");
+					this.OnumobileChanged();
 				}
 			}
 		}

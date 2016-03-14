@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>E:\Projects\Publish\07.03.2016</_PublishTargetUrl>
+    <_PublishTargetUrl>E:\Projects\Publish\13.03.2016</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="assets/apps/css/inbox.css">
@@ -15205,7 +15205,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/04/2016 21:32:13</publishTime>
     </File>
     <File Include="assets/layouts/layout7/img/logo.png">
-      <publishTime>03/04/2016 21:32:13</publishTime>
+      <publishTime>03/07/2016 23:43:16</publishTime>
     </File>
     <File Include="assets/layouts/layout7/img/mac.png">
       <publishTime>03/04/2016 21:32:13</publishTime>
@@ -16705,10 +16705,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/04/2016 21:32:14</publishTime>
     </File>
     <File Include="bin/eMenu.dll">
-      <publishTime>03/07/2016 19:56:28</publishTime>
+      <publishTime>03/13/2016 17:43:07</publishTime>
     </File>
     <File Include="DTO/EntityManager.dbml">
-      <publishTime>03/06/2016 00:46:27</publishTime>
+      <publishTime>03/13/2016 17:36:19</publishTime>
     </File>
     <File Include="Scripts/angular-mocks.js">
       <publishTime>03/04/2016 21:38:24</publishTime>
@@ -16747,19 +16747,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/05/2016 20:15:57</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>03/06/2016 00:14:41</publishTime>
+      <publishTime>03/08/2016 00:18:23</publishTime>
     </File>
     <File Include="UI/Default.aspx">
-      <publishTime>03/06/2016 01:12:17</publishTime>
+      <publishTime>03/07/2016 22:35:12</publishTime>
+    </File>
+    <File Include="UI/HotDishes.aspx">
+      <publishTime>03/13/2016 14:58:08</publishTime>
     </File>
     <File Include="UI/Login.aspx">
-      <publishTime>03/05/2016 22:20:10</publishTime>
+      <publishTime>03/08/2016 00:06:53</publishTime>
     </File>
     <File Include="UI/MenuItem.aspx">
-      <publishTime>03/06/2016 23:22:35</publishTime>
+      <publishTime>03/13/2016 13:32:25</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/06/2016 12:59:24</publishTime>
+      <publishTime>03/13/2016 15:04:27</publishTime>
     </File>
   </ItemGroup>
 </Project>

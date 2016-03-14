@@ -7,6 +7,8 @@ using eMenu.BL;
 using eMenu.DTO;
 using eMenu.Entity;
 using System.Web.Script.Services;
+using System.Web.Script.Serialization;
+
 
 namespace eMenu.Services
 {
@@ -18,14 +20,30 @@ namespace eMenu.Services
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     [System.Web.Script.Services.ScriptService]
+    
+    
     public class soapService : System.Web.Services.WebService
     {
 
         [WebMethod(EnableSession = true)]
-        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
+        
         public List<tb_menuE> GetAll()
         {
-            return new tbMenuBL().GetAll();
+            List<tb_menuE> list = new tbMenuBL().GetAll();
+            return list;
+        }
+
+        /// <summary>
+        /// refer this as the sampple method, repsonse should be JSON.
+        /// </summary>
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
+        public void getTest()
+        {
+            List<tb_menuE> list = new tbMenuBL().GetAll();
+            JavaScriptSerializer jSerial = new JavaScriptSerializer();
+            Context.Response.Write(jSerial.Serialize(list));
         }
 
         [WebMethod(EnableSession = true)]
@@ -54,13 +72,35 @@ namespace eMenu.Services
         public List<tb_foodItemsE> GetFoodAll()
         {
             return new tbFoodItemsBL().GetAll();
+
         }
 
         [WebMethod(EnableSession = true)]
         [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
-        public List<tb_hotdishesE> GetAllHotDish()
+        public List<tb_hotdishesE> GetAllHotDishToWEB()
         {
             return new tb_hotdishesBL().GetAll();
+
+            
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
+        public List<tb_hotdishesE> GetAllHotDish()
+        {
+           
+
+            List<tb_hotdishesE> list = new tb_hotdishesBL().GetAll();
+            return list;
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
+        public void getAllDishToAPP()
+        {
+            List<tb_hotdishesE> list = new tb_hotdishesBL().GetHotDishToAPP();
+            JavaScriptSerializer jSerial = new JavaScriptSerializer();
+            Context.Response.Write(jSerial.Serialize(list));
         }
 
         [WebMethod(EnableSession = true)]
@@ -94,5 +134,39 @@ namespace eMenu.Services
             new tb_hotdishesBL().Save(addFood);
 
         }
+
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        public List<tb_usersE> GetAllUsers()
+        {
+            return new tb_usersBL().GetAllUsers();
+
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
+        public void getAllUsersToAPP()
+        {
+            List<tb_usersE> list = new tb_usersBL().GetAllUsers();
+            JavaScriptSerializer jSerial = new JavaScriptSerializer();
+            Context.Response.Write(jSerial.Serialize(list));
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
+        public void AddUser(string name, string mobile)
+        {
+
+            tb_user adduser = new tb_user();
+
+            adduser.uname = name;
+            adduser.umobile = mobile;
+
+
+            new tb_usersBL().Save(adduser);
+
+        }
+
     }
 }

@@ -9,14 +9,9 @@
                 <h2 class="breadcrumbs-title">Dashboard</h2>
                 <ol class="breadcrumbs-list">
                     <li>
-                        <a class="breadcrumbs-item-link" href="#">Home</a>
+                        <a class="breadcrumbs-item-link" href="Default.aspx">Home</a>
                     </li>
-                    <li>
-                        <a class="breadcrumbs-item-link" href="#">Features</a>
-                    </li>
-                    <li>
-                        <a class="breadcrumbs-item-link" href="#">Dashboard</a>
-                    </li>
+                    
                 </ol>
             </div>
         </div>

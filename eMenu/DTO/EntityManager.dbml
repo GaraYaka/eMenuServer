@@ -42,4 +42,11 @@
       <Column Name="price" Type="System.Decimal" DbType="Decimal(16,2) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.tb_users" Member="tb_users">
+    <Type Name="tb_user">
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="uname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="umobile" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
 </Database>

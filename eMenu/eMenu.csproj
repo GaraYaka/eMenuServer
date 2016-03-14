@@ -5661,6 +5661,7 @@
     <Compile Include="BL\tb_customerBL.cs" />
     <Compile Include="BL\tb_hotdishesBL.cs" />
     <Compile Include="BL\TB_TestBL.cs" />
+    <Compile Include="BL\tb_usersBL.cs" />
     <Compile Include="DTO\EntityManager.designer.cs">
       <DependentUpon>EntityManager.dbml</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -5671,6 +5672,7 @@
     <Compile Include="Entity\tb_foodItemsE.cs" />
     <Compile Include="Entity\tb_hotdishesE.cs" />
     <Compile Include="Entity\tb_menuE.cs" />
+    <Compile Include="Entity\tb_usersE.cs" />
     <Compile Include="Entity\www1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\soapService.asmx.cs">

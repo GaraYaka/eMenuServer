@@ -51,20 +51,18 @@
                     <div class="menu-overlay-content">
                         <ul class="menu-overlay-nav text-uppercase">
                             <li>
-                                <a href="#">Dashboard</a>
+                                <a href="Default.aspx">Dashboard</a>
                             </li>
                             <li>
                                 <a href="MenuItem.aspx">Menu Items</a>
                             </li>
                             <li>
-                                <a href="#">Hot Dishes</a>
+                                <a href="HotDishes.aspx">Hot Dishes</a>
                             </li>
                             <li>
                                 <a href="#">Customers</a>
                             </li>
-                            <li>
-                                <a href="#">Settings</a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -76,7 +74,7 @@
             <!-- END NAV TRIGGER -->
             <!-- BEGIN LOGO -->
             <div class="page-logo">
-                <a href="index.html">
+                <a href="Default.aspx">
                     <img src="<%: ResolveUrl("~/assets/layouts/layout7/img/logo.png")%>" alt="logo" class="logo-default" />
                 </a>
             </div>
@@ -87,7 +85,7 @@
                     <!-- BEGIN USER LOGIN DROPDOWN -->
                             <li class="dropdown dropdown-user">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <img alt="" class="img-circle" src="<%: ResolveUrl("assets/admin/layout/img/avatar3_small.jpg")%>"/>
+                                <img alt="" class="img-circle" src="<%: ResolveUrl("~/assets/layouts/layout7/img/admin.jpg")%>"/>
                                 <span class="username">
                                 <asp:Label ID="lblUserName" runat="server" Text=""></asp:Label> </span>
                                 <i class="fa fa-angle-down"></i>

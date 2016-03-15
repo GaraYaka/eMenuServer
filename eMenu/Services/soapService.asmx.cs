@@ -76,7 +76,7 @@ namespace eMenu.Services
         }
 
         [WebMethod(EnableSession = true)]
-        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
         public void GetFoodAllToApp() 
         {           
             List<tb_foodItemsE> list = new tbFoodItemsBL().GetAll();
@@ -178,6 +178,20 @@ namespace eMenu.Services
             new tb_usersBL().Save(adduser);
 
         }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
+        public void addFeedback(string feedbackMsg)
+        {
+
+            tb_feedback addFeedback = new tb_feedback();
+
+            addFeedback.feedbackMsg = feedbackMsg;
+           
+            new tb_feedbackBL().Save(addFeedback);
+
+        }
+
 
     }
 }

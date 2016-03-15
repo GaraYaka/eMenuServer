@@ -5659,6 +5659,7 @@
     <Compile Include="BL\tbFoodItemsBL.cs" />
     <Compile Include="BL\tbMenuBL.cs" />
     <Compile Include="BL\tb_customerBL.cs" />
+    <Compile Include="BL\tb_feedbackBL.cs" />
     <Compile Include="BL\tb_hotdishesBL.cs" />
     <Compile Include="BL\TB_TestBL.cs" />
     <Compile Include="BL\tb_usersBL.cs" />
@@ -5669,6 +5670,7 @@
     </Compile>
     <Compile Include="Entity\SLIITCommonResource.cs" />
     <Compile Include="Entity\tb_customerE.cs" />
+    <Compile Include="Entity\tb_feedbackE.cs" />
     <Compile Include="Entity\tb_foodItemsE.cs" />
     <Compile Include="Entity\tb_hotdishesE.cs" />
     <Compile Include="Entity\tb_menuE.cs" />

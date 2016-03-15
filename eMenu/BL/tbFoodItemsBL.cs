@@ -25,7 +25,8 @@ namespace eMenu.BL
                            ID = d.ID,
                            name = d.name,
                            img = d.img,
-                           price = d.price
+                           price = d.price,
+                           Catid = d.CatID
 
                        }).ToList();
 

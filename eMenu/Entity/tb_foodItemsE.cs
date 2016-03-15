@@ -15,5 +15,7 @@ namespace eMenu.Entity
 
         public decimal? price { get; set; }
 
+        public int Catid { get; set; }
+
     }
 }

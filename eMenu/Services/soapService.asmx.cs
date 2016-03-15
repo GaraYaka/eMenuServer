@@ -77,7 +77,7 @@ namespace eMenu.Services
 
         [WebMethod(EnableSession = true)]
         [ScriptMethod(UseHttpGet = false, ResponseFormat = ResponseFormat.Json)]
-        public void GetFoodAllToApp()
+        public void GetFoodAllToApp() 
         {           
             List<tb_foodItemsE> list = new tbFoodItemsBL().GetAll();
             JavaScriptSerializer jSerial = new JavaScriptSerializer();

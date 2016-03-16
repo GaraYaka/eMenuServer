@@ -14,7 +14,7 @@
   </Table>
   <Table Name="dbo.tb_feedbacks" Member="tb_feedbacks">
     <Type Name="tb_feedback">
-      <Column Name="feedbackID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="feedbackID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="feedbackMsg" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="feedbackAuthor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
@@ -43,17 +43,17 @@
       <Column Name="catImg" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TB_Test" Member="TB_Tests">
+    <Type Name="TB_Test">
+      <Column Name="test" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="d" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.tb_users" Member="tb_users">
     <Type Name="tb_user">
       <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="uname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="umobile" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TB_Test" Member="TB_Tests">
-    <Type Name="TB_Test">
-      <Column Name="test" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="d" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

@@ -77,9 +77,19 @@ namespace eMenu.Services
 
         [WebMethod(EnableSession = true)]
         [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
-        public void GetFoodAllToApp() 
-        {           
+        public void GetFoodAllToApp(string catID) 
+        {
             List<tb_foodItemsE> list = new tbFoodItemsBL().GetAll();
+            JavaScriptSerializer jSerial = new JavaScriptSerializer();
+            Context.Response.Write(jSerial.Serialize(list));
+
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
+        public void GetFoodAllToAppByCatID(string catID)
+        {
+            List<tb_foodItemsE> list = new tbFoodItemsBL().GetByCatID(catID);
             JavaScriptSerializer jSerial = new JavaScriptSerializer();
             Context.Response.Write(jSerial.Serialize(list));
 
@@ -162,6 +172,19 @@ namespace eMenu.Services
             List<tb_usersE> list = new tb_usersBL().GetAllUsers();
             JavaScriptSerializer jSerial = new JavaScriptSerializer();
             Context.Response.Write(jSerial.Serialize(list));
+        }
+
+        [WebMethod(EnableSession = true)]
+        [ScriptMethod(UseHttpGet = true, ResponseFormat = ResponseFormat.Json)]
+        public void AddUser2(string name)
+        {
+
+            tb_user adduser = new tb_user();
+
+            adduser.uname = name;
+
+            new tb_usersBL().Save(adduser);
+
         }
 
         [WebMethod(EnableSession = true)]

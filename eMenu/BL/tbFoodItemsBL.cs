@@ -32,5 +32,21 @@ namespace eMenu.BL
 
             return all;
         }
+        public List<tb_foodItemsE> GetByCatID(string catID)
+        {
+            var all = (from d in ITPManager.tb_foodItems
+                       where d.CatID == int.Parse(catID)
+                       select new tb_foodItemsE
+                       {
+                           ID = d.ID,
+                           name = d.name,
+                           img = d.img,
+                           price = d.price,
+                           Catid = d.CatID
+
+                       }).ToList();
+
+            return all;
+        }
     }
 }
